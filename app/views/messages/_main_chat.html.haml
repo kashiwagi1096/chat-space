@@ -1,0 +1,41 @@
+.chat-block
+  .header
+    .header__room
+      .header__room--mame
+        room
+      %ul.header__room--members
+        member:
+        %li.member
+          name
+        %li.member
+          name
+
+    = link_to "#", class: "header__edit--btn" do
+      EDIT
+
+  .messages
+    .message
+      .message__upper
+        .message__upper--name
+          name
+        .message__upper--date
+          date
+      .message__lower
+        text
+
+    .message
+      .message__upper
+        .message__upper--name
+          name
+        .message__upper--date
+          date
+      .message__lower
+        text
+  .form
+    .m-b
+      %input.new-message
+      .new-message__inp
+        %label.new-message__inp--img
+          = icon('fa', 'image', class: "icon")
+          %input.cursor{type: "file"}
+      %input.submit{type: 'submit', value: 'Send'}

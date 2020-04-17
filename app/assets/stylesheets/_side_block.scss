@@ -1,0 +1,74 @@
+.side-block {
+  height: 100vh;
+
+  &__header {
+    height: 100px;
+    width: 300px;
+    background-color: #253141;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    &--item {
+      height: 20px;
+      width: 260px;
+      display: flex;
+      justify-content: space-between;
+
+
+      &--name {
+        line-height: 20px;
+        font-size: 16px;
+        color: $white;
+
+      }
+      &--btn {
+        width: 60px;
+        line-height: 20px;
+        align-items: right;
+        display: flex;
+        justify-content: flex-end;
+        font-size: 16px;
+
+        &--edit {
+          color: $white;
+
+        }
+        &--setting{
+          color: $white;
+          margin-left: 5px;
+
+        }
+      }
+    }
+  }
+  .rooms {
+    height: calc(100vh - 100px);
+    background-color: #2f3e51;
+      .room {
+        height: 100px;
+        padding-top: 20px;
+        
+
+        &__name {
+          height: 20px;
+          width: 260px;
+          margin: auto;
+          font-size: 16px;
+          line-height: 20px;
+          color: $white;
+        }
+
+        &__member {
+          height: 15px;
+          width: 260px;
+          margin: 5px auto;
+          font-size: 11px;
+          line-height: 15px;
+          color: $white;
+        }
+
+      }
+  }
+}
