@@ -32,7 +32,7 @@
         }
       }
       &__edit--btn {
-        color: $blue;
+        color: $light_blue;
         height: 40px;
         width: 72px;
         margin:  28px 40px 0px 0px;
@@ -112,7 +112,7 @@
         .submit {
           width: 100px;
           margin-left: 15px;
-          background-color: $blue;
+          background-color: $light_blue;
           color:$white;
           display: flex;
           align-items: center;
@@ -138,7 +138,7 @@
       &--date {
         font-size: 12px;
         padding-left: 10px;
-        color: $gray;
+        color: $light_gray;
       }
   }
 
