@@ -2,11 +2,11 @@
   .side-block__header
     .side-block__header--item
       .side-block__header--item--name
-        name
+        = current_user.name
       .side-block__header--item--btn
         = link_to "#", class: "side-block__header--item--btn--edit" do
           = icon('fas fa-edit', class:  "side-block__header--item--btn--icon") 
-        = link_to "#", class: "side-block__header--item--btn--setting" do
+        = link_to edit_user_path(current_user), class: "side-block__header--item--btn--setting" do
           = icon('fas fa-cog', class:  "side-block__header--item--btn--icon")
   .rooms
     .room
