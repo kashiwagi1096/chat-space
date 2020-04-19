@@ -4,26 +4,15 @@
       .side-block__header--item--name
         = current_user.name
       .side-block__header--item--btn
-        = link_to "#", class: "side-block__header--item--btn--edit" do
+        = link_to new_group_path, class: "side-block__header--item--btn--edit" do
           = icon('fas fa-edit', class:  "side-block__header--item--btn--icon") 
         = link_to edit_user_path(current_user), class: "side-block__header--item--btn--setting" do
-          = icon('fas fa-cog', class:  "side-block__header--item--btn--icon")
+          = icon('fas fa-cog', class: "side-block__header--item--btn--icon")
   .rooms
-    .room
-      .room__name
-        ルーム名
-      .room__member
-        最新メッセージ
-    .room
-      .room__name
-        ルーム名
-      .room__member
-        最新メッセージ
-    .room
-      .room__name
-        ルーム名
-      .room__member
-        最新メッセージ
-    
-
-
+    - current_user.groups.each do |group|
+      .room
+        = link_to '#' do
+          .room__name
+            = group.name
+          .room__message
+            メッセージはありません
