@@ -11,8 +11,8 @@
   .rooms
     - current_user.groups.each do |group|
       .room
-        = link_to '#' do
+        = link_to group_messages_path(group) do
           .room__name
             = group.name
           .room__message
-            メッセージはありません
+            = group.show_last_message

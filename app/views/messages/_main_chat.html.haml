@@ -2,40 +2,25 @@
   .header
     .header__room
       .header__room--mame
-        room
-      %ul.header__room--members
+        = @group.name
+      .members
         member:
-        %li.member
-          name
-        %li.member
-          name
+        - @group.users.each do |user|
+          .member
+            = user.name
 
-    = link_to "#", class: "header__edit--btn" do
+    = link_to edit_group_path(@group.id), class: "header__edit--btn" do
       EDIT
 
   .messages
-    .message
-      .message__upper
-        .message__upper--name
-          name
-        .message__upper--date
-          date
-      .message__lower
-        text
+    = render @messages
 
-    .message
-      .message__upper
-        .message__upper--name
-          name
-        .message__upper--date
-          date
-      .message__lower
-        text
   .form
     .m-b
-      %input.new-message
-      .new-message__inp
-        %label.new-message__inp--img
-          = icon('fa', 'image', class: "icon")
-          %input.cursor{type: "file"}
-      %input.submit{type: 'submit', value: 'Send'}
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class:'new-message', placeholder: 'type a message'
+        .new-message__inp
+          = f.label :image, class: 'new-message__inp--img' do
+            = icon('fa', 'image', class: "icon")
+            = f.file_field :image, class: 'cursor'
+        = f.submit 'Send', class: 'submit'
