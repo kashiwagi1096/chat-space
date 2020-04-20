@@ -9,40 +9,39 @@
     display: flex;
     justify-content: space-between;
 
-      &__room {
-        padding: 35px 0px 0px 40px;
-        position: relative;
+    &__room {
+      padding: 35px 0px 0px 40px;
+      position: relative;;
 
-        &--name {
-          font-size: 20px;
-          color: $black;
-        }
-
-        &--members {
-          font-size: 12px;
-          color: $black;
-          display: flex;
-          position: absolute;
-          bottom: 0px;
-
-          .member {
-            margin-left: 5px;
-          }
-
-        }
+      &--name {
+        font-size: 20px;
+        color: $black;
       }
-      &__edit--btn {
-        color: $light_blue;
-        height: 40px;
-        width: 72px;
-        margin:  28px 40px 0px 0px;
-        border: solid 2px;
-        font-size: 16px;
+
+     .members {
+        font-size: 12px;
+        color: $black;
         display: flex;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
+        position: absolute;
+        bottom: 0px;
+
+        .member {
+          margin-left: 5px;
+        }
       }
+    }
+    &__edit--btn {
+      color: $light_blue;
+      height: 40px;
+      width: 72px;
+      margin:  28px 40px 0px 0px;
+      border: solid 2px;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    }
   }
 
   .messages {
@@ -51,7 +50,7 @@
     padding: 35px 40px;
 
     .message {
-        
+
       &__upper {
         display: flex;
         margin-bottom: 12px;
@@ -63,7 +62,7 @@
           &--date {
             font-size: 12px;
             padding-left: 10px;
-            color: $black;
+            color: $light_gray
           }
       }
     
@@ -73,41 +72,47 @@
         margin-bottom: 46px;
       }
     }
- 
   }
 
   .form {
-    height: 90px;
-    background-color: #d2d2d2;
-    padding: 20px 40px ;
-    
-      .m-b {
+  height: 90px;
+  background-color: #d2d2d2;
+  padding: 20px 40px 20px;
+  
+  
+    .m-b {
+      height: 50px;
+      width: 100%;
+
+      .new_message {
         height: 50px;
-        width: 100%;
         display: flex;
         justify-content: space-between;
+        position: relative;
 
-        .new-message {
-          height: 50px;
+        .new-message{
           width: calc(100% - 115px);
-          background-color:$white;
-
-            &__inp {
-              display: flex;
-              position: relative;
-              
-              .icon{
-                position: absolute;
-                right: 10px;
-                top: 10px;
-
-              }
-             
-              .cursor{
-                  display: none;
-              }
-            }
+          
         }
+
+        .new-message__inp {
+          position: absolute;
+          right: 130px;
+          top: 10px;
+          
+          
+          &--img{
+            
+            width: 10px;
+            .fa.fa-image.icon {
+            }
+            .cursor {
+              display: none;
+            } 
+           
+          }
+        }
+      
 
         .submit {
           width: 100px;
@@ -121,30 +126,6 @@
           border-radius: 5px;
         }
       }
-  }
-}
-
-
-.message {
-        
-  &__upper {
-    display: flex;
-    margin-bottom: 12px;
-
-      &--name {
-        font-size: 16px;
-        color: $black;
-      }
-      &--date {
-        font-size: 12px;
-        padding-left: 10px;
-        color: $light_gray;
-      }
-  }
-
-  &__lower{
-    font-size: 14px;
-    color: $dark-gray;
-    margin-bottom: 46px;
+    }
   }
 }

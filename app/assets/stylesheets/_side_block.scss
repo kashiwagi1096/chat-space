@@ -47,11 +47,11 @@
   .rooms {
     height: calc(100vh - 100px);
     background-color: $side_blue_light;
+    
       .room {
         height: 100px;
         padding-top: 20px;
         
-
         &__name {
           height: 20px;
           width: 260px;
@@ -59,6 +59,7 @@
           font-size: 16px;
           line-height: 20px;
           color: $white;
+         
         }
 
         &__message {
