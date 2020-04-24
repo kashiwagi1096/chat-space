@@ -10,8 +10,8 @@
     justify-content: space-between;
 
     &__room {
-      padding: 35px 0px 0px 40px;
-      position: relative;;
+      margin-top: 35px ;
+      margin-left: 40px ;
 
       &--name {
         font-size: 20px;
@@ -21,12 +21,12 @@
      .members {
         font-size: 12px;
         color: $black;
-        display: flex;
-        position: absolute;
-        bottom: 0px;
+        display: inline;
+        padding-bottom: 0px;
 
         .member {
           margin-left: 5px;
+          display: inline;
         }
       }
     }
@@ -48,6 +48,7 @@
     height: calc(100vh - 190px);
     background-color: #fafafa;
     padding: 35px 40px;
+    overflow: scroll;
 
     .message {
 
