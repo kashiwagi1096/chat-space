@@ -47,30 +47,33 @@
   .rooms {
     height: calc(100vh - 100px);
     background-color: $side_blue_light;
+    overflow: scroll;
     
       .room {
         height: 100px;
         padding-top: 20px;
-        
-        &__name {
-          height: 20px;
-          width: 260px;
-          margin: auto;
-          font-size: 16px;
-          line-height: 20px;
-          color: $white;
-         
-        }
 
-        &__message {
-          height: 15px;
-          width: 260px;
-          margin: 5px auto;
-          font-size: 11px;
-          line-height: 15px;
-          color: $white;
-        }
+        .room-btn {
+          text-decoration: none;
 
+          &__name {
+            height: 20px;
+            width: 260px;
+            margin: auto;
+            font-size: 16px;
+            line-height: 20px;
+            color: $white;
+          }
+
+          &__message {
+            height: 15px;
+            width: 260px;
+            margin: 5px auto;
+            font-size: 11px;
+            line-height: 15px;
+            color: $white;
+          }
+        }
       }
   }
 }
