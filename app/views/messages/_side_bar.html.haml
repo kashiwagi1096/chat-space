@@ -11,8 +11,8 @@
   .rooms
     - current_user.groups.each do |group|
       .room
-        = link_to group_messages_path(group) do
-          .room__name
+        = link_to group_messages_path(group), class: "room-btn" do
+          .room-btn__name
             = group.name
-          .room__message
+          .room-btn__message
             = group.show_last_message
